@@ -15,7 +15,7 @@ FORMULA_TYPES=( "osx" "linux64")
 
 # download the source code and unpack it into LIB_NAME
 function download() {
-    git clone ${GIT_URL} eigen/
+    git clone --depth=1 ${GIT_URL} eigen/
     cd eigen/
     git checkout ${VER}
 }
