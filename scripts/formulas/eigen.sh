@@ -9,7 +9,7 @@ VER=3.3.4
 
 # tools for git use
 GIT_URL="https://github.com/eigenteam/eigen-git-mirror.git"
-GIT_TAG="$VER"
+GIT_TAG=$VER
 
 FORMULA_TYPES=( "osx" "linux64")
 
@@ -17,7 +17,7 @@ FORMULA_TYPES=( "osx" "linux64")
 function download() {
     git clone --depth=1 ${GIT_URL} eigen/
     cd eigen/
-    git checkout ${VER}
+    git checkout ${GIT_TAG}
 }
 
 # prepare the build environment, executed inside the lib src dir
