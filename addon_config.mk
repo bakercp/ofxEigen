@@ -10,10 +10,15 @@ common:
 	ADDON_CFLAGS = -O3 -Wno-strict-aliasing
 
 	# Exclude includes and source.
-	ADDON_SOURCES_EXCLUDE = libs/eigen/include/%
-	ADDON_INCLUDES_EXCLUDE = libs/eigen/include/%
+	ADDON_SOURCES_EXCLUDE = libs/eigen3/include/%
+	ADDON_INCLUDES_EXCLUDE = libs/eigen3/include/%
+
+	ADDON_SOURCES_EXCLUDE += libs/eigen3-nnls/include/%
+	ADDON_INCLUDES_EXCLUDE += libs/eigen3-nnls/include/%
+
 
 	# Manually add the includes and source.
-	ADDON_INCLUDES = libs/eigen/include
+	ADDON_INCLUDES = libs/eigen3/include
+	ADDON_INCLUDES += libs/eigen3-nnls/include
 	ADDON_INCLUDES += libs/ofxEigen/include
 	ADDON_INCLUDES += src
